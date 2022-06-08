@@ -21,7 +21,35 @@ public class Array {
 		//①
 		int[] scores1 = new int[] {20, 30, 40, 50, 80};
 		//②
-		int[] scores2 = {20, 30, 40, 50, 80};
+		int[] scores2 = {20, 30, 40, 50, 80}; //ここを修正するだけでよい
+		
+		
+		int sum = scores[0] + scores[1] + scores[2] + scores[3] + scores[4]; //配列の要素は0からなので注意
+		int avg = sum / scores.length;
+		System.out.println("合計点：" + sum);
+		System.out.println("平均点" + avg);
+		
+		
+		//配列の最初から最後までの全要素を順にアクセスするのが最もよく用いられるパターン
+		for (int i = 0; i < scores2.length; i++) {
+			System.out.println(scores2[i]); //変数iは添え字　ループのたびにiの値が0～4で変化する
+		}
+		
+		sum = 0; //変数sumに集計結果を入れるために0で初期化して準備
+		for (int i = 0; i < scores2.length; i++) { //for文
+			sum += scores2[i]; //+=で1科目ずつ変数sumに合算する
+		}
+		avg = sum / scores2.length;
+		System.out.println("合計点:" + sum);
+		System.out.println("平均点:" + avg); 
+		
+		int count = 0;
+		for (int i = 0; i < scores2.length; i++) {
+			if (scores2[i] >= 50) {
+				count++; //配列の要素は0からのため、1をプラスしておく
+			}
+		}
+		System.out.println("50点以上の科目の数は：" + count);
 		
 	}
 }
