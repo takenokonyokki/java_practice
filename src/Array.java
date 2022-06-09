@@ -51,5 +51,52 @@ public class Array {
 		}
 		System.out.println("50点以上の科目の数は：" + count);
 		
+		
+		int[] seq = new int[10];
+		//塩基配列をランダムに生成
+		for (int i = 0; i < seq.length; i++) {
+			seq[i] = new java.util.Random().nextInt(4);
+		}
+		//生成した塩基配列の記号を表示
+		for (int i = 0; i < seq.length; i++) {
+			//switch文の場合
+			switch (seq[i]) {
+			case 0:
+				System.out.print("A ");
+				break;
+			case 1:
+				System.out.print("T ");
+				break;
+			case 2:
+				System.out.print("G ");
+				break;
+			case 3:
+				System.out.print("C ");
+				break;
+			}
+		}
+		System.out.println(""); //改行
+		
+		//switch文をシンプルにした場合
+		for (int i = 0; i < seq.length; i++) {
+			char[] base = {'A', 'T', 'G', 'C'};
+			//char[] base = {'A', 'T', 'G', 'C'};は3つの処理に分けられる
+			//int baseType = seq[i]; i番目の数値を取得
+			//char baseChar = base[baseType]; 数値に対応する記号を取得
+			//System.out.print(baseChar + " "); 記号を画面に表示
+			System.out.print(base[seq[i]] + " ");
+		}
+		System.out.println("");
+		//for文と拡張for文
+		//従来のfor文
+		for (int i = 0; i < scores2.length; i++) {
+			System.out.print(scores2[i] + " ");
+		}
+		System.out.println("");
+		//拡張for文 ループ変数や添え字を記述する必要がない
+		for (int value : scores2) {
+			System.out.print(value + " ");
+		}
+		
 	}
 }
