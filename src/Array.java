@@ -97,6 +97,45 @@ public class Array {
 		for (int value : scores2) {
 			System.out.print(value + " ");
 		}
+		System.out.println("");
 		
+		int[] arrayA = {1, 2, 3}; //配列変数arrayAに配列を代入
+		int[] arrayB; //配列変数arrayBを宣言
+		arrayB = arrayA; //arrayBとarrayAは同じ配列を参照する
+		arrayB[0] = 100; //arrayBの最初の要素に100を代入
+		System.out.println(arrayA[0]); //arrayB = arrayAとなっているため、100が出力される
+		//仮にSystem.out.println(arrayA[1])の場合は、2が出力される
+		
+		
+		boolean judge = true;
+		if (judge == true) {
+			int[] array = {1, 2, 3}; //ブロック内で宣言した変数の寿命はブロックが終了するまでであり、ブロックが終了したら、この変数はメモリから消滅する
+			int[] array3 = new int[3]; //newで確保された要素は普通の変数ではないため、ブロックが終了しても寿命は迎えない。その結果、どの配列変数からも参照されない状態でメモリに残ってしまう。
+			//残った配列は、Javaのプログラムからどのような方法を使っても読み書きできず事実上メモリ内のゴミになる。
+			//このようなゴミが溜まり続けてメモリを圧迫する可能性がある。
+		}
+		//しかし、Javaには、ガベージコレクションという仕組みが常に動いており、このようなメモリのごみを自動的に探して片づけてくれる
+		
+		
+		//null　「何もない」ということ
+		int[] array4 = {1, 2, 3};
+		array4 = null; //nullが代入されると、参照型の変数はどこも参照していないことになる。これを参照を切るともいう。　参照型にのみ代入できる。基本型には代入できない。
+//		array4[0] = 10; //nullが格納されている配列変数を利用しようとするとエラーが発生する。
+		
+		//多次元の配列　※業務システムの開発では使う機会は少ない。科学技術計算などで多く利用される
+		int[][] scores5 = new int[2][3]; //2次元配列　2の方が行で3の方が列
+		scores5[0][0] = 40;
+		scores5[0][1] = 50;
+		scores5[0][2] = 60;
+		scores5[1][0] = 70;
+		scores5[1][1] = 80;
+		scores5[1][2] = 90;
+		System.out.println(scores5[1][1]);
+		
+		int[][] scores6 = { {40, 50, 60}, {80, 60, 70} }; //このように初期化が可能
+		//↑は、40,50,60の3つの要素が入った配列と80,60,70の3つの要素が入った配列の計2つの配列が入っているということ
+		System.out.println(scores6.length); //なので、scores6には2つの配列が入っているため2が出力される
+		System.out.println(scores6[0].length); //なので、scores6の最初の配列には3つの要素が入っているため3が出力される
+ 		
 	}
 }
