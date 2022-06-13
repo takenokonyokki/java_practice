@@ -8,5 +8,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="calcapp"/>
 	<classpathentry kind="src" path="practice6"/>
+	<classpathentry kind="src" path="instance"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
