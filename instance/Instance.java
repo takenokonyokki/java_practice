@@ -1,9 +1,11 @@
 public class Instance {
 	public static void main(String[] args) {
 		//1.勇者を生成
-		Hero h = new Hero();
+		Hero h = new Hero(); 
+		//2.フィールドに初期値をセット
 		h.name = "minato";
 		h.hp = 100;
+		System.out.println("HERO" + h.name);
 		
 		Matango m1 = new Matango();
 		m1.hp = 50;
@@ -13,10 +15,6 @@ public class Instance {
 		m2.hp = 48;
 		m2.suffix = 'B';
 		
-		//2.フィールドに初期値をセット
-		h.name = "minato";
-		h.hp = 100;
-		System.out.println("HERO" + h.name);
 		
 		//3.勇者のメソッドを呼び出していく
 		h.sit(5); //5秒座れ
