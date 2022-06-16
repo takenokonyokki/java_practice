@@ -2,6 +2,7 @@ public class Hero {
 	//属性はクラスブロックの中に変数宣言を記述する = フィールドの宣言
 	String name;
 	int hp;
+	Sword sword; //Swordクラス型のsword変数を定義
 	
 	//眠る sleepメソッド
 	public void sleep() {
