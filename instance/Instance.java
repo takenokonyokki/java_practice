@@ -1,9 +1,9 @@
 public class Instance {
 	public static void main(String[] args) {
 		//1.勇者を生成
-		Hero h = new Hero(); 
+		Hero h = new Hero("minato"); 
 		//2.フィールドに初期値をセット
-		h.name = "minato";
+//		h.name = "minato";
 		h.hp = 100;
 		System.out.println("HERO" + h.name);
 		
