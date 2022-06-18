@@ -26,9 +26,16 @@ public class Hero {
 	
 	//逃げる runメソッド
 	public void run() {
-		System.out.println(this.name + "run");
+		System.out.println("run");
 		System.out.println("GAMEOVER");
-		System.out.println("HP" + this.hp);
+		System.out.println("HP");
+	}
+	
+	//攻撃　attackメソッド
+	public void attack(Matango m) {
+		System.out.println("attack");
+		m.hp -= 5;
+		System.out.println("5damage");
 	}
 	
 	//Heroメソッド 引数にString nameとすることで、文字列を1つ受け取れるようになり、Heroクラス型のインスタンスが生成されたときにnameの初期値も指定できるようになった。
